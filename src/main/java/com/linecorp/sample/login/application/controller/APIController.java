@@ -53,6 +53,14 @@ public class APIController {
         lineAPIService.revoke(token);
     }
 
+    @RequestMapping("api/userProfile")
+    public void getUserProfile(HttpSession httpSession) {
+        final AccessToken token = getAccessToken(httpSession);
+
+        System.out.println(lineAPIService.idToken(token.id_token));
+    }
+
+
     private AccessToken getAccessToken(HttpSession httpSession) {
         return (AccessToken) httpSession.getAttribute(WebController.ACCESS_TOKEN);
     }
