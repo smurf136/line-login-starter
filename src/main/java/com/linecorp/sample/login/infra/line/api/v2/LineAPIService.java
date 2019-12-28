@@ -45,11 +45,11 @@ public class LineAPIService {
     private static final String GRANT_TYPE_AUTHORIZATION_CODE = "authorization_code";
     private static final String GRANT_TYPE_REFRESH_TOKEN = "refresh_token";
 
-    @Value("${linecorp.platform.channel.channelId}")
+    @Value("${linecorp.platform.channel.channelId:1653703435}")
     private String channelId;
-    @Value("${linecorp.platform.channel.channelSecret}")
+    @Value("${linecorp.platform.channel.channelSecret:1de29b41b4411ff9832c4bba82fe3234}")
     private String channelSecret;
-    @Value("${linecorp.platform.channel.callbackUrl}")
+    @Value("${linecorp.platform.channel.callbackUrl:https://line12devlogin.herokuapp.com/auth}")
     private String callbackUrl;
 
     public AccessToken accessToken(String code) {
