@@ -21,12 +21,14 @@ import java.util.function.Function;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import com.linecorp.sample.login.infra.http.Client;
 import com.linecorp.sample.login.infra.line.api.v2.response.AccessToken;
 import com.linecorp.sample.login.infra.line.api.v2.response.Verify;
 
+import org.springframework.stereotype.Controller;
 import retrofit2.Call;
 
 import com.auth0.jwt.JWT;

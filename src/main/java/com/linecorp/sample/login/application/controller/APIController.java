@@ -25,6 +25,8 @@ import com.linecorp.sample.login.infra.line.api.v2.LineAPIService;
 import com.linecorp.sample.login.infra.line.api.v2.response.AccessToken;
 import com.linecorp.sample.login.infra.line.api.v2.response.Verify;
 
+import java.util.HashMap;
+
 @RestController
 public class APIController {
 
@@ -38,6 +40,8 @@ public class APIController {
         if (newAccessToken != null) {
             setAccessToken(httpSession, newAccessToken);
         }
+
+
         return newAccessToken;
     }
 

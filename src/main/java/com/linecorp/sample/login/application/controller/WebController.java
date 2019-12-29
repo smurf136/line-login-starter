@@ -30,6 +30,7 @@ import com.linecorp.sample.login.infra.line.api.v2.LineAPIService;
 import com.linecorp.sample.login.infra.line.api.v2.response.AccessToken;
 import com.linecorp.sample.login.infra.line.api.v2.response.IdToken;
 import com.linecorp.sample.login.infra.utils.CommonUtils;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>user web application pages</p>
@@ -41,6 +42,7 @@ public class WebController {
     static final String ACCESS_TOKEN = "accessToken";
     private static final Logger logger = Logger.getLogger(WebController.class);
     private static final String NONCE = "nonce";
+
 
     @Autowired
     private LineAPIService lineAPIService;
@@ -57,13 +59,14 @@ public class WebController {
     /**
      * <p>Redirect to LINE Login Page</p>
      */
-    @GetMapping(value = "/gotoauthpage")
+    @RequestMapping(value = "/gotoauthpage")
     public String goToAuthPage(HttpSession httpSession){
         final String state = CommonUtils.getToken();
         final String nonce = CommonUtils.getToken();
         httpSession.setAttribute(LINE_WEB_LOGIN_STATE, state);
         httpSession.setAttribute(NONCE, nonce);
         final String url = lineAPIService.getLineWebLoginUrl(state, nonce, Arrays.asList("openid", "profile"));
+
         return "redirect:" + url;
     }
 
@@ -101,7 +104,7 @@ public class WebController {
         httpSession.removeAttribute(LINE_WEB_LOGIN_STATE);
         AccessToken token = lineAPIService.accessToken(code);
         if (logger.isDebugEnabled()) {
-            logger.debug("scope : " + token.scope);
+            logger.debug("scope1 : " + token.scope);
             logger.debug("access_token : " + token.access_token);
             logger.debug("token_type : " + token.token_type);
             logger.debug("expires_in : " + token.expires_in);
