@@ -46,16 +46,16 @@
     <!-- http client -->
     <!-- use license 'The Apache License, Version 2.0' -->
     <!-- https://github.com/square/retrofit/blob/master/LICENSE.txt -->
-    <dependency>
-      <groupId>${retrofit2.groupId}</groupId>
-      <artifactId>retrofit</artifactId>
-      <version>${retrofit2.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${retrofit2.groupId}</groupId>
-      <artifactId>converter-gson</artifactId>
-      <version>${retrofit2.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>${retrofit2.groupId}</groupId>-->
+<!--      <artifactId>retrofit</artifactId>-->
+<!--      <version>${retrofit2.version}</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>${retrofit2.groupId}</groupId>-->
+<!--      <artifactId>converter-gson</artifactId>-->
+<!--      <version>${retrofit2.version}</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>com.squareup.okhttp3</groupId>
       <artifactId>logging-interceptor</artifactId>
