@@ -65,8 +65,8 @@ public class WebController {
         final String nonce = CommonUtils.getToken();
         httpSession.setAttribute(LINE_WEB_LOGIN_STATE, state);
         httpSession.setAttribute(NONCE, nonce);
-        final String url = lineAPIService.getLineWebLoginUrl(state, nonce, Arrays.asList("openid", "profile"));
-
+        final String url = lineAPIService.getLineWebLoginUrl(state, nonce, Arrays.asList("openid", "profile", "email"));
+        logger.debug("Rediect Url: " + url);
         return "redirect:" + url;
     }
 
@@ -117,8 +117,8 @@ public class WebController {
     }
 
     /**
-    * <p>login success Page
-    */
+     * <p>login success Page
+     */
     @RequestMapping("/success")
     public String success(HttpSession httpSession, Model model) {
 
@@ -144,16 +144,16 @@ public class WebController {
     }
 
     /**
-    * <p>login Cancel Page
-    */
+     * <p>login Cancel Page
+     */
     @RequestMapping("/loginCancel")
     public String loginCancel() {
         return "user/login_cancel";
     }
 
     /**
-    * <p>Session Error Page
-    */
+     * <p>Session Error Page
+     */
     @RequestMapping("/sessionError")
     public String sessionError() {
         return "user/session_error";
