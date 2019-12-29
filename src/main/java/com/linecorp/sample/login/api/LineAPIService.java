@@ -1,42 +1,21 @@
-/*
- * Copyright 2016 LINE Corporation
- *
- * LINE Corporation licenses this file to you under the Apache License,
- * version 2.0 (the "License"); you may not use this file except in compliance
- * with the License. You may obtain a copy of the License at:
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations
- * under the License.
- */
-package com.linecorp.sample.login.infra.line.api.v2;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.function.Function;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
-
-import com.linecorp.sample.login.infra.http.Client;
-import com.linecorp.sample.login.infra.line.api.v2.response.AccessToken;
-import com.linecorp.sample.login.infra.line.api.v2.response.Verify;
-
-import org.springframework.stereotype.Controller;
-import retrofit2.Call;
+package com.linecorp.sample.login.api;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.auth0.jwt.exceptions.JWTDecodeException;
-import com.linecorp.sample.login.infra.line.api.v2.response.IdToken;
+import com.linecorp.sample.login.api.response.AccessToken;
+import com.linecorp.sample.login.api.response.IdToken;
+import com.linecorp.sample.login.api.response.Verify;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import retrofit2.Call;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.List;
+import java.util.function.Function;
 
 /**
  * <p>LINE v2 API Access</p>
@@ -100,7 +79,7 @@ public class LineAPIService {
         }
     }
 
-    public String getLineWebLoginUrl(String state, String nonce, List<String> scopes) {
+    public String getLineLoginUrl(String state, String nonce, List<String> scopes) {
         final String encodedCallbackUrl;
         final String scope = String.join("%20", scopes);
 
@@ -121,13 +100,13 @@ public class LineAPIService {
     public boolean verifyIdToken(String id_token, String nonce) {
         try {
             JWT.require(
-                Algorithm.HMAC256(channelSecret))
-                .withIssuer("https://access.line.me")
-                .withAudience(channelId)
-                .withClaim("nonce", nonce)
-                .acceptLeeway(60) // add 60 seconds leeway to handle clock skew between client and server sides.
-                .build()
-                .verify(id_token);
+                    Algorithm.HMAC256(channelSecret))
+                    .withIssuer("https://access.line.me")
+                    .withAudience(channelId)
+                    .withClaim("nonce", nonce)
+                    .acceptLeeway(60) // add 60 seconds leeway to handle clock skew between client and server sides.
+                    .build()
+                    .verify(id_token);
             return true;
         } catch (UnsupportedEncodingException e) {
             //UTF-8 encoding not supported
