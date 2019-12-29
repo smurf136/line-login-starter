@@ -72,12 +72,13 @@ public class LineController {
         httpSession.removeAttribute(LINE_WEB_LOGIN_STATE);
         AccessToken token = lineAPIService.accessToken(code);
         if (logger.isDebugEnabled()) {
-            logger.debug("scope1 : " + token.scope);
+            logger.debug("scope : " + token.scope);
             logger.debug("access_token : " + token.access_token);
             logger.debug("token_type : " + token.token_type);
             logger.debug("expires_in : " + token.expires_in);
             logger.debug("refresh_token : " + token.refresh_token);
             logger.debug("id_token : " + token.id_token);
+
         }
         httpSession.setAttribute(ACCESS_TOKEN, token);
         System.out.println("Log Token: " + token.toString());
@@ -103,6 +104,7 @@ public class LineController {
             logger.debug("userId : " + idToken.sub);
             logger.debug("displayName : " + idToken.name);
             logger.debug("pictureUrl : " + idToken.picture);
+            logger.debug("email : " + idToken.email);
         }
         model.addAttribute("idToken", idToken);
         return "user/success";

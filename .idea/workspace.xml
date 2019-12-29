@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c843c99-9acc-4267-9965-6f5de6411780" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/api/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/api/LineAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/api/LineAPIService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/api/response/AccessToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/api/response/IdToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/api/response/Verify.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/utils/CommonUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/application/controller/APIController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/application/controller/WebController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/infra/http/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/infra/line/api/v2/LineAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/infra/line/api/v2/LineAPIService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/infra/line/api/v2/response/AccessToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/infra/line/api/v2/response/IdToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/infra/line/api/v2/response/Verify.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/infra/utils/CommonUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/api/LineAPIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/api/LineAPIService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/api/response/IdToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/api/response/IdToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/controller/LineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/controller/LineController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +145,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577541045720</updated>
-      <workItem from="1577601578080" duration="5628000" />
+      <workItem from="1577601578080" duration="6794000" />
     </task>
     <servers />
   </component>
