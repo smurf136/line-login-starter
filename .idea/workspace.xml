@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c843c99-9acc-4267-9965-6f5de6411780" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/line-login-starter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/line-login-starter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/application/controller/APIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/application/controller/APIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/application/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/application/controller/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/infra/line/api/v2/LineAPIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linecorp/sample/login/infra/line/api/v2/LineAPIService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +123,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577541045720</updated>
-      <workItem from="1577601578080" duration="1322000" />
+      <workItem from="1577601578080" duration="2183000" />
     </task>
     <servers />
   </component>
